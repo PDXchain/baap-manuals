@@ -1,3 +1,9 @@
+## Using Web
+
+Log in to http://wallet.pdx.link/
+
+## Using API
+
 ### 1. Configuring maven pom.xml
 
 Maven repository
@@ -20,7 +26,7 @@ PDX dependency
 </dependency>
 ```
 
-### 2. Deploy, start, stop & remove
+### 2. Deploy, start, stop & withdraw
 
 PDX BaaP provides a simple class for provisioning, start, stop and de-provisioning of smart contracts. Note that PDX BaaP employs lazy-loading mode on smart contracts. The deployer can manually start it or it'll auto-started on executing first TX. 
 
@@ -54,7 +60,6 @@ private static void start(BlockchainDriver driver, String chaincode, String vers
 ```
 
 
-
 #### Stop
 
 ```java
@@ -68,7 +73,7 @@ private static void stop(BlockchainDriver driver, String chaincode, String versi
 
 
 
-#### Remove
+#### Withdraw
 
 ```java
 private static void withdraw(BlockchainDriver driver, String chaincode, String version) throws Exception {
